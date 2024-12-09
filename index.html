@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pomodoro</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<span class="wrapper">
+
+		<div class="header">
+			<div class="header-btn" id="settings-btn" >
+				<img src="./assets/icons8-настройки-50-белый.svg">
+			</div>
+			<div class="header-btn" id="info-btn">
+				<img src="./assets/icons8-информация-50-белый.svg">
+			</div>
+		</div>
+
+		<div class="overlay" id="overlay-modal">
+			<div id="settings" class="modal">
+				<div class="modal-container">
+					<div class="header-modal">
+						<p id="titleSettings" class="modalTitle">Настройки</p>
+						<div class="close-btn">
+							<img src="./assets/close.svg">
+						</div>
+					</div>
+					<ul class="listSettings">
+						<li>
+							<div class="nameSetting">Время работы, мин</div>
+							<div class="input-wrap">
+								<input id="work-input-value" type="number">
+							</div>
+						</li>
+						<li>
+							<div class="nameSetting">Короткий перерыв</div>
+							<div class="input-wrap">
+								<input id="shortPause-input-value" type="number">
+							</div>
+						</li>
+						<li>
+							<div class="nameSetting">Длительный перерыв</div>
+							<div class="input-wrap">
+								<input id="longPause-input-value" type="number">
+							</div>
+						</li>
+						<li>
+							<div class="nameSetting">Количество помидорок за круг</div>
+							<div class="input-wrap">
+								<input id="pomodoroNum-input-value" type="number">
+							</div>
+						</li>
+					</ul>
+				
+					<div class="modal-btns-block">
+						<button id="save-settings" class="modal-btn">Сохранить</button>
+						<button id="reset-settings" class="modal-btn">Сбросить</button>
+					</div>
+				</div>
+				
+			</div> <!--settings closed-->
+
+			<div id="info" class="modal">
+				<div class="modal-container">
+					<div class="header-modal">
+			
+						<p id="titleInfo" class="modalTitle">Что такое таймер Помодоро?</p>
+						<div class="close-btn">
+							<img src="./assets/close.svg">
+						</div>
+					</div>
+
+					<div class="text-info">
+						<p>
+							<b>Таймер Pomodoro</b> — это техника тайм-менеджмента, которая включает деление 
+							рабочего времени на активные периоды и время отдыха. 
+							Как правило, стаdится таймер на 25 минут работы и 5 минут отдыха.
+						</p> 
+						<p>
+							Эти отрезки времени называют <b>«помидорами»</b> — в честь кухонного таймера в виде 
+							помидора, который использовал создатель метода, итальянский студент Франческо Чирилло. 
+						</p>
+						<p>
+							Основная идея метода Pomodoro заключается в том, чтобы сосредоточиться на задаче в 
+							течение короткого времени, а затем сделать перерыв — снять напряжение и отдохнуть. 
+							В конце каждого цикла, обычно состоящего из четырёх «помидоров», рекомендуется сделать 
+							длинный перерыв. 
+						</p>
+						<p>
+							Метод Pomodoro помогает улучшить продуктивность и эффективность работы, так как он позволяет 
+							поддерживать высокий уровень концентрации и предотвращает усталость и перегрузку информацией.
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		</div> <!--overlay closed-->
+
+		<div class="chose-block">
+			<button id="work-time" class="chose-btn">Работа</button>
+			<button id="short-pause"class="chose-btn">Короткий перерыв</button>
+			<button id="long-pause" class="chose-btn">Длительный перерыв</button>
+		</div>
+
+			<div class="progress-circle">
+
+				<div class="timer-content">
+					<span id="timer-title" class="timer-title">Работа</span>
+					<div id='time-value' class="time"></div>
+					<div class="timer-btns">
+						<div class="next-btn">
+							<img src="./assets/rewind.png">
+						</div>
+						<div class="start-btn active">
+							<img src="./assets/play.png">
+						</div>
+						<div class="pause-btn">
+							<img src="./assets/pause.png">
+						</div>
+						<div class="reset-btn">
+							<img src="./assets/reset.png">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="left-half-clipper">
+					 <div class="first50-bar"></div>
+					 <div class="value-bar"></div>
+				</div>
+		 </div>
+
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
